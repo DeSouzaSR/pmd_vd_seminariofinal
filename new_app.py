@@ -12,7 +12,8 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-st.title("Exemplo de App com Streamlit")
+st.title("Visualização de Dados - PMD")
+st.write("Trabalho para Visualização de Dados - Seminário Final")
 
 # Carregar dados
 df = pd.DataFrame({
