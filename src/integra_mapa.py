@@ -8,9 +8,17 @@
 # Licence:     MIT
 #-------------------------------------------------------------------------------
 
+# Imports
 import pandas as pd
 import geopandas as gpd
+pd.set_option('display.max_columns', None)
 
-dados_geo = gpd.read_file(r'../data/raw_data/ES_Municipios_2024/ES_Municipios_2024.shp')
+# Leitura de dados
+df_geo = gpd.read_file(r'../data/raw_data/ES_Municipios_2024/ES_Municipios_2024.shp')
+df_ped = pd.read_csv(r'../data/raw_data/df_es_filtrado.csv')
 
-print(dados_geo.head())
+df_ped['ID_MUNICIPIO'] = df_ped['ID_MUNICIPIO'].astype('str')
+
+
+# Inclusão das geometrias nos dados pedagógicos
+df_ped = df_ped.merge(df_geo, left_on='ID_MUNICIPIO', right_on='CD_MUN', how='left')
