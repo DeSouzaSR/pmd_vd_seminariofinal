@@ -19,6 +19,8 @@ df_ped = pd.read_csv(r'../data/raw_data/df_es_filtrado.csv')
 
 df_ped['ID_MUNICIPIO'] = df_ped['ID_MUNICIPIO'].astype('str')
 
-
 # Inclusão das geometrias nos dados pedagógicos
-df_ped = df_ped.merge(df_geo, left_on='ID_MUNICIPIO', right_on='CD_MUN', how='left')
+#df_ped = df_ped.merge(df_geo, left_on='ID_MUNICIPIO', right_on='CD_MUN', how='left')
+
+print(df_geo['CD_MUN'].unique())
+print(df_ped['ID_MUNICIPIO'].unique())
