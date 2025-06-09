@@ -11,7 +11,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-#import seaborn as sns
 
 st.title("Desempenho SAEB 2023: Uma Análise Visual por Nível Socioeconômico no Ensino Médio Capixaba")
 st.subheader("Trabalho para a disciplina de Visualização de Dados da Pós-graduação em Mineração de Dados do IFES - Serra - ES")
