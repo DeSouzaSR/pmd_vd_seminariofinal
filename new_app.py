@@ -11,8 +11,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
+#import seaborn as sns
 
 st.title("Desempenho SAEB 2023: Uma Análise Visual por Nível Socioeconômico no Ensino Médio Capixaba")
 st.subheader("Trabalho para a disciplina de Visualização de Dados da Pós-graduação em Mineração de Dados do IFES - Serra - ES")
@@ -74,26 +73,6 @@ df = pd.DataFrame(data)
 
 # Mapeando os níveis do INSE para uma ordem numérica para plotagem
 df = df.sort_values('INSE')
-
-# plt.figure(figsize=(10, 7))
-# sns.scatterplot(
-#     data=df,
-#     x='PROFICIENCIA_LP',
-#     y='PROFICIENCIA_MT',
-#     hue='INSE',       # Colore os pontos de acordo com o INSE
-#     size='INSE',  # Opcional: ajusta o tamanho do ponto pelo nível do INSE
-#     sizes=(50, 400),  # Define a faixa de tamanho dos pontos
-#     alpha=0.7,
-#     palette='viridis' # Escolha de paleta de cores
-# )
-# plt.title('Relação entre Proficiência em LP e Matemática por Nível Socioeconômico')
-# plt.xlabel('Proficiência em Língua Portuguesa')
-# plt.ylabel('Proficiência em Matemática')
-# plt.grid(True, linestyle='--', alpha=0.6)
-# plt.legend(title='Nível Socioeconômico', bbox_to_anchor=(1.05, 1), loc='upper left')
-# plt.tight_layout()
-# plt.show()
-
 nivel = st.radio(
     label="INSE",
     options=np.arange(1,9),
