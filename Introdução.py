@@ -10,7 +10,7 @@ st.set_page_config(
 st.write("# Desempenho SAEB 2023: Uma Análise Visual por Nível Socioeconômico no Ensino Médio Capixaba")
 
 # Mensagem na barra lateral para guiar o usuário
-st.sidebar.success("Selecione uma exibição de dados acima para iniciar a análise.")
+#st.sidebar.success("Selecione uma exibição de dados acima para iniciar a análise.")
 
 # Separador visual para organização do conteúdo
 st.markdown("---")
