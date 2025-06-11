@@ -124,5 +124,9 @@ else: # selected_stat_type == "Média, Mediana e Moda"
 
 # --- Informações Adicionais para o Streamlit ---
 st.write("---")
-st.write("As tabelas fornecem uma visão sumarizada do desempenho dos estudantes nas avaliações do SAEB, permitindo")
-st.write("a comparação das estatísticas de proficiência entre os diferentes estratos socioeconômicos.")
+st.markdown(
+    """
+    As tabelas fornecem uma visão sumarizada do desempenho dos estudantes nas avaliações do SAEB, permitindo
+    a comparação das estatísticas de proficiência entre os diferentes estratos socioeconômicos.
+    """
+)
